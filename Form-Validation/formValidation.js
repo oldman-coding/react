@@ -69,7 +69,10 @@ function Validator (options) {
                                 }
                                 break;
                             case 'checkbox':
-                                if (!input.matches(':checked')) return values;
+                                if (!input.matches(':checked')) {
+                                    values[input.name] = '';
+                                    return values;
+                                }
                                 if (!Array.isArray(values[input.name])) {
                                     values[input.name] = [];
                                 }
