@@ -21,17 +21,18 @@ function Validator (options) {
         var rulesSelect = selectorRules[rule.selector];
 
         for (var i=0; i < rulesSelect.length; i++) {
+           
             var errorMessage = rulesSelect[i](inputElement.value)
             if (errorMessage) break;
         }
 
         if (errorMessage) {
             errorElement.innerText = errorMessage;
-            inputElement.parentElement.classList.add('invalid');
+            getParent(inputElement, options.formGroupSelector).classList.add('invalid');
             return false;
         } else {
             errorElement.innerText = '';
-            inputElement.parentElement.classList.remove('invalid');
+            getParent(inputElement, options.formGroupSelector).classList.remove('invalid');
             return true;
         }
         
@@ -61,7 +62,24 @@ function Validator (options) {
                 if (typeof options.onSubmit === 'function') {
                     var enableInputs = document.querySelectorAll('input[name]:not([disabled])');
                     var formValues = Array.from(enableInputs).reduce(function (values, input) { 
-                        values[input.name] = input.value;                
+                        switch (input.type) {
+                            case 'radio': 
+                                if (input.matches(':checked')) {
+                                    values[input.name] = input.value;                
+                                }
+                                break;
+                            case 'checkbox':
+                                if (!input.matches(':checked')) return values;
+                                if (!Array.isArray(values[input.name])) {
+                                    values[input.name] = [];
+                                }
+                                values[input.name].push(input.value);
+                                break; 
+                            default: 
+                                values[input.name] = input.value;                
+                        }
+
+                        
                         return values;
                     }, {})
 
@@ -85,21 +103,26 @@ function Validator (options) {
             }
             ;
 
-            var inputElement = document.querySelector(rule.selector);
+            var inputElements = document.querySelectorAll(rule.selector);
             var errorSelector = options.errorSelector;
-            
-            if (inputElement) {
-                // Hanle blur events
-                inputElement.onblur = function () {
-                    validate(inputElement, rule, errorSelector);
-                };
-                // Handle input events 
-                inputElement.oninput = function () {
-                    var errorElement =  inputElement.parentElement.querySelector(options.errorSelector);
-                    errorElement.innerText = '';
-                    inputElement.parentElement.classList.remove('invalid');
+
+            Array.from(inputElements).forEach(function (inputElement) {
+                if (inputElement) {
+                    // Hanle blur events
+                    inputElement.onblur = function () {
+                        validate(inputElement, rule, errorSelector);
+                    };
+                    // Handle input events 
+                    inputElement.oninput = function () {
+                        var parentElement = getParent(inputElement, options.formGroupSelector);
+                        var errorElement =  parentElement.querySelector(options.errorSelector);
+                        errorElement.innerText = '';
+                        parentElement.classList.remove('invalid');
+                    }
                 }
-            }
+            })
+            
+            
         })
     } 
 }
@@ -108,7 +131,7 @@ Validator.isRequired = function(selector) {
     return {
         selector: selector, 
         test: function(inputValue) {
-            return inputValue.trim() ? undefined : "Vui lòng nhập trường này"
+            return inputValue ? undefined : "Vui lòng nhập trường này"
         }
     };
 } 
@@ -132,6 +155,8 @@ Validator.minLength = function(selector, minLength) {
         test: function(value) {
            return value.length >= minLength ? undefined : `This field must be greater than or equal to ${minLength} character`
         }
+
+
     }
 }
 
