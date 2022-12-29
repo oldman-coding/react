@@ -1,67 +1,16 @@
-const h1 = document.createElement('h1');
-h1.textContent = "This is vanilla js" ; 
-h1.className = "header";
-console.log(h1);
+// import "./index.css"
+import Header from "./Header"
+import Footer from "./Footer"
+import MainContent from "./MainContent"
 
-// const element = (
-//     <div>
-//         <h1 className='header'>Hello this is vanilla js</h1>
-//         <p>This is paragraph</p>
-//     </div>
-    
-// )
-
-// const element = (
-//     <nav>
-//         <h1>React training</h1>
-//         <ul>
-//             <li>Pricing</li>
-//             <li>About us</li>
-//             <li>Contact</li>
-//         </ul>
-//     </nav>
-// )
-
-const element = (
-    <div>
-        <h1>My react website </h1>
-        <h2>Reason i love react</h2>
-        <ol>
-            <li>Reuseable</li>
-            <li>Fast</li>
-            <li>Composable</li>
-        </ol>
-    </div>
-)
-
-const page = (
-    <div>
-        <img src ="./logo-react.png" width = "40px" />
-        <h1>Fun facts about React</h1>
-        <ul>
-            <li>Was firt original in 2013</li>
-            <li>Has 100K stars on Github</li>
-            <li>Is maintained by Facebook</li>
-            <li>Power thousands of enterprise apps, including mobile apps</li>
-        </ul>
-    </div>
-) 
-
-function TemporaryPage() {
+function App() {
     return (
-        <div>
-        <img src ="./logo-react.png" width = "40px" />
-        <h1>Fun facts about React</h1>
-        <ul>
-            <li>Was firt original in 2013</li>
-            <li>Has 100K stars on Github</li>
-            <li>Is maintained by Facebook</li>
-            <li>Power thousands of enterprise apps, including mobile apps</li>
-        </ul>
-    </div>
+        <React.Fragment>
+            <Header />
+            <MainContent />
+            <Footer />
+        </React.Fragment>
     )
 }
 
-// document.getElementById("root").append(JSON.stringify(element))
-
-ReactDOM.render(<TemporaryPage />, document.getElementById("root")) 
+ReactDOM.render(<App />, document.getElementById("root")) 
