@@ -47,7 +47,7 @@ const page = (
     </div>
 ) 
 
-function temproraryPage() {
+function TemporaryPage() {
     return (
         <div>
         <img src ="./logo-react.png" width = "40px" />
@@ -64,4 +64,4 @@ function temproraryPage() {
 
 // document.getElementById("root").append(JSON.stringify(element))
 
-ReactDOM.render(temproraryPage(), document.getElementById("root")) 
+ReactDOM.render(<TemporaryPage />, document.getElementById("root")) 
