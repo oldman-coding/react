@@ -7,6 +7,7 @@ export default function Main() {
                 <li>Maintain by facebook</li>
                 <li>Most popular front end framework</li>
                 <li>Even using by facebook</li>
+                <li>Power libraries and framework</li>
             </ul>
         </div>
     ) 

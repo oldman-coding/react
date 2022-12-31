@@ -33,6 +33,16 @@ nav > h3 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+nav > h4 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+
+  color: #DEEBF8;
+}
+
 .nav__logo {
   width: 30px;
 }
@@ -55,25 +65,39 @@ nav > h3 {
 .main {
   width: 550px;
   height: 459px;
- 
-
-background: #282D35;
+  background: #282D35;
+  padding: 57px 27px;
+  background-image: url(./images/logo512.png); 
+  background-repeat: no-repeat;
+  background-position: right 60%;
+  background-size: 25%;
+  /* background-color: #33373E; */
 }
 
 .main__title {
+  margin: 0;
   width: 424px;
   height: 41px;
-  margin-left: 27px; 
-  padding-top: 57px;
-
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 39.06px;
   line-height: 47px;
   letter-spacing: -0.05em;
-
   color: #FFFFFF;
+}
+
+.main__reason >li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding-block: 15px;
+  color: #FFFFFF;
+}
+
+.main__reason > li::marker {
+  font-size: 20px;
+  color: #61DAFB;
 }
 
 
