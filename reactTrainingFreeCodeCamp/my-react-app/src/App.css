@@ -1,13 +1,71 @@
-.app {
-  padding-left: 27px; 
-  padding-right: 27px;
-  margin-left: 27px;
-  margin-right: 27px;
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0; 
   font-family: 'Inter', sans-serif;
+}
+
+.app {
+  width: 550px;
+  height: 868px;
+  background-color: #23252C;
+  padding: 44px 117px 44px 117px;
+}
+
+.profile {
+  height: 317px;
+  background: url(./images/laura.png);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.profile-info {
+  background: #1A1B21;
+  padding: 21px 0 21px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-info__name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin-block: 0;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.profile-info__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 15px;
+  text-align: center;
+  color: #F3BF99;
+  margin-block: 0;
+}
+
+.profile-info > p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+/* identical to box height, or 15px */
+  text-align: center;
+  color: #F5F5F5;
+}
+
+.profile-info__contact {
+  display: flex;
+}
+
+/* .app {
+  padding-left: 27px; 
+  padding-right: 27px;
+  margin-left: 27px;
+  margin-right: 27px;
 }
 
 nav{
@@ -57,12 +115,6 @@ nav > h4 {
   color: #DEEBF8;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-
-
 .main {
   width: 550px;
   height: 459px;
@@ -72,7 +124,6 @@ nav > h4 {
   background-repeat: no-repeat;
   background-position: right 60%;
   background-size: 25%;
-  /* background-color: #33373E; */
 }
 
 .main__title {
@@ -101,5 +152,7 @@ nav > h4 {
   color: #61DAFB;
 }
 
+
+ */
 
 
