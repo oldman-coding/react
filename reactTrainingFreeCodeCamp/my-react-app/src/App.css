@@ -167,6 +167,26 @@ body {
   padding-bottom: 26px;
 }
 
+.footer {
+  width: 317px;
+  height: 64px;
+  background: #161619;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__icon {
+  background-color: #918E9B;
+  padding: 2px;
+  margin-right: 20px;
+;
+}
+
+.footer__icon:last-child {
+  margin-right: 0;
+}
 
 
 /* .app {

@@ -1,5 +1,13 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 export default function Footer() {
-    <div className = "footer">
-        <div></div>
-    </div>
+    return (
+        <div className = "footer">
+            <FontAwesomeIcon icon="fa-brands fa-twitter" className='footer__icon' />
+            <FontAwesomeIcon icon="fa-brands fa-square-facebook" className='footer__icon' />
+            <FontAwesomeIcon icon="fa-brands fa-github" className='footer__icon' />
+            <FontAwesomeIcon icon="fa-brands fa-instagram" className='footer__icon' />
+        </div>
+    )
+   
 }
