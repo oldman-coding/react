@@ -16,7 +16,7 @@ body {
 
 .profile {
   height: 317px;
-  background: url(./images/laura.png);
+  background: url(./images/laura.png); 
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -59,7 +59,115 @@ body {
 
 .profile-info__contact {
   display: flex;
+  justify-content: space-evenly;
 }
+
+.profile-email {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  width: 115px;
+  height: 34px;
+  padding: 9px 13px 9px 11px;
+  gap: 8px;
+}
+
+.profile-email > span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  /* gray/700 */
+  color: #374151;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.profile-linkedin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 13px 9px 11px;
+  gap: 8px;
+
+  width: 115px;
+  height: 34px;
+  background: #5093E2;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+.profile-linkedin__icon {
+  /* background: #FFFFFF; */
+}
+
+
+
+.profile-linkedin > span {
+  width: 57px;
+  height: 16px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  color: #FFFFFF;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+} 
+
+.about {
+  width: 317px;
+  
+  background: #1A1B21;
+}
+
+.about__group {
+  width: 247px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__heading {
+  width: 242.71px;
+  height: 21px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+/* or 24px */
+  color: #F5F5F5;
+}
+
+.about__description {
+  width: 247px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  /* or 15px */
+  color: #DCDCDC;
+  padding: 10px 0 10px 0;
+}
+
+.about__description:last-child { 
+  padding-bottom: 26px;
+}
+
+
 
 /* .app {
   padding-left: 27px; 
