@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+* { 
+  box-sizing: border-box;
+}
+
+.app {
+  width: 550px;
+}
+
+nav {
+  height: 70px;
+  background: #FFFFFF;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.nav__logo {
+  width: 82.02px;
+  height: 25.35px;
+  margin: 22px auto 22px 25px;
+}
+
+.hero {
+  background: #E5E5E5;
+}
+
+.hero__image {
+  /* width: 395.91px; */
+  /* display: block; */
+  /* margin: 25px auto 35px auto; */
+  padding: 25px auto 35px auto;
+ 
+}
