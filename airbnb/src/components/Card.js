@@ -9,7 +9,7 @@ export default function Card({data}) {
             {
                 data.map(item => {
                     return <div className="card" key = {item.id}>
-                            <div className="card__badge">SOLD OUT</div>
+                            <div className="card__badge">{item.spot == 0 ? "SOLD OUT" : "ONLINE" }</div>
                             {/* <img src= {`%PUBLIC_URL%/images/${item.img}`} className="card__image" /> */}
                             <img src= {zera} className="card__image" />
                             <div className="card__star">
