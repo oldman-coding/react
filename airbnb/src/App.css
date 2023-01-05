@@ -63,6 +63,7 @@ nav {
 .card-wrapper {
   margin-left: 36px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -74,6 +75,7 @@ nav {
 
 .card__badge{
   position: absolute;
+  width: 61px;
   z-index: 1;
   top: 6px; 
   left: 6px;
@@ -85,9 +87,9 @@ nav {
   line-height: 110%;
   /* or 11px */
   text-align: center;
-  display: flex;
   color: #222222;
-  padding: 5px 5px 5px 5px; 
+  padding-top: 5px; 
+  padding-bottom: 5px; 
 }
 
 .card__badge > span {
@@ -138,6 +140,7 @@ nav {
   font-weight: 600;
   font-size: 12px;
   line-height: 110%;
+  padding-bottom: 20px;
 }
 
 .card__price > p {
