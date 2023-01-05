@@ -68,7 +68,37 @@ nav {
 .card {
   max-width: 176px;
   margin-right: 20px;
+  position: relative;
   /* justify-content: space-around; */
+}
+
+.card__badge{
+
+  position: absolute;
+  z-index: 1;
+  top: 6px; 
+  left: 6px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 110%;
+  /* or 11px */
+  text-align: center;
+  display: flex;
+  color: #222222;
+  padding: 5px 5px 5px 5px; 
+}
+
+.card__badge > span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 110%;
+  /* or 11px */
+  text-align: center;
+  color: #222222;
 }
 
 .card__image {
