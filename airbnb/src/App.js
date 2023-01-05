@@ -7,6 +7,7 @@ import Card from './components/Card';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {   } from '@fortawesome/free-brands-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import data from "./data/data.js"
 
 library.add(faStar)
 
@@ -15,7 +16,10 @@ function App() {
     <div className="app">
       <Navbar />
       <Hero />
-      <Card />
+      <Card 
+        data = {data}
+      />
+
     </div>
   );
 }
