@@ -11,9 +11,8 @@ body {
   width: 550px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow:#918E9B;
-  border-color: blue;
-  border-width: 2px;
+  background-color: #FFFFFF;
+  border: 0.5px solid #cccccc;
 }
 
 .navbar {
@@ -22,7 +21,7 @@ body {
   display: flex;
   justify-items: center;
   justify-content: center;
-  
+
 }
 
 .nav__heading {
