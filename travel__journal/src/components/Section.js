@@ -1,21 +1,23 @@
+import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default function Section() {
+export default function Section(props) {
+    const {image, country, location_link, location_address, start_date, end_date, description  } = props
     return (
         <div className = "section">
-            <img className = 'section__img' src ="https://source.unsplash.com/WLxQvbMyfas" />
+            <img className = 'section__img' src = {image} />
             <div className = "section__content">
                 <div className='section__location'>
                     <FontAwesomeIcon className= "section__location-icon" icon="fa-solid fa-location-dot" />
-                    <p className = "section__location-country">JAPAN</p>
-                    <a className = "section__location-link" href="https://google.com">View on Google maps</a>
+                    <p className = "section__location-country">{country.toUpperCase()}</p>
+                    <a className = "section__location-link" href={location_link}>View on Google maps</a>
                 </div>
-                <div className='section__location-address'>Mount Fuji</div>
+                <div className='section__location-address'>{location_address}</div>
                 <div className= "section__date">
-                    12 Jan, 2021 - 24 Jan, 2021
+                   {start_date} - {end_date}
                 </div>
                 <div className='section__description'>
-                    Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.
+                    {description}
                 </div>
             </div>
         </div>
