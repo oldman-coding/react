@@ -5,6 +5,11 @@ export default function Form() {
     function handeClick() {
         console.log('Click Done');
     }
+
+    function handleHover() {
+        console.log("i was hovered"); 
+        alert("i was hovered");
+    }
     return (
         <form className='form'>
             <div className = "form__data">
@@ -12,7 +17,13 @@ export default function Form() {
                 <input type = "text" className = "form__input" placeholder ='and take my money'></input>
             </div>
 
-            <button onClick = {handeClick} className="form__submit">Get a new meme image</button>
+            <button 
+                onClick = {handeClick} 
+                className="form__submit"
+                onMouseEnter = {handleHover}
+                >
+                Get a new meme image
+            </button>
             <div className="form__generator">
                 <img className="form__img" src={memeimg} />
                 <div className = "form__text form__text--top">SHUT UP</div>
