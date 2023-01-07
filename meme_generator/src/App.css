@@ -106,6 +106,7 @@ body {
   border-width: 0px;
   color: #FFFFFF;
   padding: 0;
+  cursor: pointer;
 }
 
 .form__generator {
@@ -134,7 +135,6 @@ body {
 }
 
 .form__text--top {
-
   position: absolute;
   top: 40px;
   left: 0; 
