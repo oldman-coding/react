@@ -107,3 +107,46 @@ body {
   color: #FFFFFF;
   padding: 0;
 }
+
+.form__generator {
+  position: relative;
+}
+
+.form__img {
+  width: 477px;
+  height: 268px;
+  /* background-image: url('./images/memeimg.png'); */
+  border-radius: 2px;
+  margin-top: 36px;
+  
+} 
+
+.form__text{
+  font-family: 'Impact';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  /* identical to box height */
+  color: #FFFFFF;
+  /* border: 2px solid #000000; */
+}
+
+.form__text--top {
+
+  position: absolute;
+  top: 40px;
+  left: 0; 
+  right: 0;
+  margin: 0 auto;
+}
+
+.form__text--bottom {
+  position: absolute;
+  left: 0; 
+  right: 0;
+  margin: 0 auto;
+  bottom: 40px;
+  text-align: center;
+}
