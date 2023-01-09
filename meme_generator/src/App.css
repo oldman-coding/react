@@ -149,3 +149,10 @@ body {
   bottom: 40px;
   text-align: center;
 }
+
+.counter {
+  width: 20px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
