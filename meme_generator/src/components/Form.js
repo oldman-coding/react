@@ -1,15 +1,18 @@
 import memeimg from '../images/memeimg.png';
+import memeData from './memeData';
+import MemeGenerator from './MemeGenerator';
+import {useState} from "react"; 
 
 
 export default function Form() {
-    function handeClick() {
-        console.log('Click Done');
+    const [imgUrl,  setImgUrl] = useState(memeData[0])
+
+    function handleRandomImage(e) {
+        e.preventDefault();
+        const index = Math.floor(Math.random() * (memeData.length )); 
+        setImgUrl(memeData[index])
     }
 
-    function handleHover() {
-        console.log("i was hovered"); 
-        alert("i was hovered");
-    }
     return (
         <form className='form'>
             <div className = "form__data">
@@ -18,18 +21,12 @@ export default function Form() {
             </div>
 
             <button 
-                onClick = {handeClick} 
+                onClick = {handleRandomImage} 
                 className="form__submit"
-                onMouseEnter = {handleHover}
                 >
                 Get a new meme image
             </button>
-            <div className="form__generator">
-                <img className="form__img" src={memeimg} />
-                <div className = "form__text form__text--top">SHUT UP</div>
-                <div className = "form__text form__text--bottom">AND TAKE MY MONEY</div>
-            </div>
-            
+            <MemeGenerator {...imgUrl}/>
         </form>
     )
 }
