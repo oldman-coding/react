@@ -2,12 +2,13 @@ import {useState} from "react";
 
 export default function Counter() {
     const [count, setCount] = useState(0)
+
     function handleMinusCount() {
-        setCount(count -1)
+        setCount(prevCount => prevCount -1)
     }
 
     function handlePlusCount() {
-        setCount(count + 1)
+        setCount(prevState => prevState + 1)
     }
 
     return (
