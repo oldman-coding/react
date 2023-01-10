@@ -5,6 +5,7 @@ import Form from './components/Form';
 import Counter from './components/Counter';
 import AddItem from './components/AddItem';
 import Contact from './components/Contact';
+import Boxes from './components/Boxes';
 
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -19,6 +20,7 @@ function App() {
       <Counter />
       <AddItem />
       <Contact />
+      <Boxes darkMode ={true} />
     </div>
   );
 }
