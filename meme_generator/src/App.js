@@ -47,9 +47,9 @@ function App() {
   const boxesElements = boxes.map(box => 
     <Boxes 
       key={box.id} 
-      id={box.id}
       on={box.on} 
-      toggle = {toggle} />)
+      toggle = {() => toggle(box.id)} />)
+      
   return (
     <div className="App">
       <Navbar />
