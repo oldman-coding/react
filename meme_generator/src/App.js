@@ -22,12 +22,13 @@ function App() {
     setBoxes(prevBox => {
       let box = []
       for (let i=0; i < prevBox.length; i ++) {
+        let currentBox = prevBox[i]
         if (i !== id) {
-          box.push(prevBox[i])
+          box.push(currentBox)
         } else {
           box.push({
-            id: id, 
-            on: !prevBox[i].on
+            ...currentBox,
+            on: !currentBox.on
           })
         }
       }
