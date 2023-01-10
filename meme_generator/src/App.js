@@ -17,8 +17,8 @@ library.add(faStar,)
 
 function App() {
   const [boxes, setBoxes] = useState (dataBoxes)
-  
-  const boxesElements = boxes.map(box => <Boxes key={box.id} {...box} />)
+
+  const boxesElements = boxes.map(box => <Boxes key={box.id} on={box.on} />)
   return (
     <div className="App">
       <Navbar />
