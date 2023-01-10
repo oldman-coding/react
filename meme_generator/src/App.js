@@ -17,7 +17,7 @@ library.add(faStar,)
 
 function App() {
   const [boxes, setBoxes] = useState (dataBoxes)
-
+  /*
   function toggle(id) {
     setBoxes(prevBox => {
       let box = []
@@ -34,6 +34,14 @@ function App() {
       }
       return box
     })
+  }
+  */
+
+  // Imperative way set state
+  function toggle(id) {
+    setBoxes(prevBox => 
+      prevBox.map(box => box.id === id ? {...box, on: !box.on} : box )
+    )
   }
 
   const boxesElements = boxes.map(box => 
