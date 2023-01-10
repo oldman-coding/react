@@ -8,7 +8,7 @@ export default function AddItem() {
     
     function addItem() {
         setArrayItem(prevArray => 
-            [...prevArray, `Thing ${arrayItem.length + 1}`] 
+            [...prevArray, `Thing ${prevArray.length + 1}`] 
         )
     }
 
@@ -20,7 +20,7 @@ export default function AddItem() {
                 >
                 Add Item
             </button>
-            <div>{itemElements}</div>
+            {itemElements}
         </div>
     ) 
 }
