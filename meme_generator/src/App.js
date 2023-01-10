@@ -17,9 +17,22 @@ library.add(faStar,)
 
 function App() {
   const [boxes, setBoxes] = useState (dataBoxes)
-  
+
   function toggle(id) {
-    console.log(id)
+    setBoxes(prevBox => {
+      let box = []
+      for (let i=0; i < prevBox.length; i ++) {
+        if (i !== id) {
+          box.push(prevBox[i])
+        } else {
+          box.push({
+            id: id, 
+            on: !prevBox[i].on
+          })
+        }
+      }
+      return box
+    })
   }
 
   const boxesElements = boxes.map(box => 
