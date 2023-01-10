@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Form from './components/Form';
 import Counter from './components/Counter';
+import AddItem from './components/AddItem';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Form />
       <Counter />
+      <AddItem />
     </div>
   );
 }

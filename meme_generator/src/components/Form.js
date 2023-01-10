@@ -6,6 +6,7 @@ import {useState} from "react";
 
 export default function Form() {
     const [imgUrl,  setImgUrl] = useState(memeData[0])
+    const [topText, setTopText] = useState("Shut up")
 
     function handleRandomImage(e) {
         e.preventDefault();
@@ -13,20 +14,31 @@ export default function Form() {
         setImgUrl(memeData[index])
     }
 
+    function handleTopText(e) {
+        setTopText(e.target.value)
+        console.log("topText is: ", topText)
+    }
+
     return (
         <form className='form'>
             <div className = "form__data">
-                <input type="text" className = "form__input" placeholder="Shut up"></input>
+                <input 
+                    type="text"  
+                    className = "form__input" 
+                    placeholder="Shut up" 
+                    value ={topText} 
+                    onChange = {handleTopText}     
+                />
                 <input type = "text" className = "form__input" placeholder ='and take my money'></input>
             </div>
 
             <button 
-                onClick = {handleRandomImage} 
-                className="form__submit"
+                onSubmit = {handleRandomImage}
+                className= "form__submit"
                 >
                 Get a new meme image
             </button>
-            <MemeGenerator {...imgUrl}/>
+            {/* <MemeGenerator {...topText}/> */}
         </form>
     )
 }
