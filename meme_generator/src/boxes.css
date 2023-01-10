@@ -2,11 +2,8 @@
     box-sizing: border-box;
 }
 
-.box {
-    margin-top: 5px;
-}
 
-.box__item {
+.box {
     width: 100px;
     height: 100px;
     border: 1px solid black;
