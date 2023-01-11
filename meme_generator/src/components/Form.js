@@ -50,6 +50,7 @@ export default function Form() {
                     placeholder ='Inset bottom text'
                     onChange = {(e) => {bottomText = e.target.value}} 
                     value = {bottomText}
+                    name = "bottomText"
                 />
 
             </div>

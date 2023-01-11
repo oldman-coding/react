@@ -15,6 +15,7 @@ import Messages from './components/Messages';
 
 import Joke from './components/Joke';
 import jokedata from './data/jokedata'; 
+import InputForm from './components/InputForm';
 
 library.add(faStar,)
 
@@ -76,6 +77,7 @@ function App() {
       {boxesElements}
       <Messages />
       {jokeElements}
+      <InputForm />
     </div>
   );
 }
