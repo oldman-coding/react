@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import dataBoxes from './data/dataBoxes'
+import Messages from './components/Messages';
 
 
 library.add(faStar,)
@@ -60,6 +61,7 @@ function App() {
       <AddItem />
       <Contact />
       {boxesElements}
+      <Messages />
     </div>
   );
 }

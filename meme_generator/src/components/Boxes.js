@@ -12,7 +12,7 @@ export default function Boxes(props) {
             className="box"
             onClick = {props.toggle}
             >
-            {props.isShown && <p>{props.id}</p>}
+            {props.isShown && <h3>{props.id}</h3>}
         </div>
     )
 }
