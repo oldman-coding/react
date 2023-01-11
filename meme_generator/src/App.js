@@ -40,14 +40,16 @@ function App() {
   // Imperative way set state
   function toggle(id) {
     setBoxes(prevBox => 
-      prevBox.map(box => box.id === id ? {...box, on: !box.on} : box )
+      prevBox.map(box => box.id === id ? {...box, on: !box.on, isShown: !box.isShown} : box )
     )
   }
 
   const boxesElements = boxes.map(box => 
     <Boxes 
       key={box.id} 
-      on={box.on} 
+      on={box.on}
+      id={box.id} 
+      isShown = {box.isShown}
       toggle = {() => toggle(box.id)} />)
       
   return (
