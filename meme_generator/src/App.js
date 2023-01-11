@@ -13,11 +13,14 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import dataBoxes from './data/dataBoxes'
 import Messages from './components/Messages';
 
+import Joke from './components/Joke';
+import jokedata from './data/jokedata'; 
 
 library.add(faStar,)
 
 function App() {
   const [boxes, setBoxes] = useState (dataBoxes)
+  const [jokes, setJokes] = useState (jokedata)
   /*
   function toggle(id) {
     setBoxes(prevBox => {
@@ -51,7 +54,17 @@ function App() {
       on={box.on}
       id={box.id} 
       isShown = {box.isShown}
-      toggle = {() => toggle(box.id)} />)
+      toggle = {() => toggle(box.id)} />
+  )
+  
+  const jokeElements = jokes.map(joke => 
+    <Joke 
+      key = {joke.id}
+      heading = {joke.heading}
+      description = {joke.description}
+      isShown = {joke.isShown}
+    />
+  )
       
   return (
     <div className="App">
@@ -62,6 +75,7 @@ function App() {
       <Contact />
       {boxesElements}
       <Messages />
+      {jokeElements}
     </div>
   );
 }
