@@ -1,9 +1,15 @@
 import { useState } from "react"
 export default function Messages() {
-    const [messages, setMessages] = useState("")
+    const [messages, setMessages] = useState([])
+    const len = messages.length
     return (
         <div>
-            {messages.length > 0 && <div>You have {messages.length} unread messages</div>}
+            {(len > 1 )
+                ? <div>You have {len} unread messages</div>
+                : (len ==1) 
+                    ? <div>You have {len} message</div>
+                    : <div>You have all caught!</div>  
+            }
         </div>
     )
 }
