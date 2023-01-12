@@ -63,11 +63,20 @@ export default function InputForm() {
             </label>
             <br/>
             <textarea
-                type = "checkbox"
+                type = "text"
                 value = {input.comments}
                 onChange = {handleChange}
                 name = "comments"
             />
+            <br/>
+            <div
+                value = {input.radioBox}
+                onChange = {handleChange}
+            >
+                <input type="radio" value="Male" name="gender" /> Male
+                <input type="radio" value="Female" name="gender" /> Female
+                <input type="radio" value="Other" name="gender" /> Other
+            </div>   
            
         </div>
     ) 
