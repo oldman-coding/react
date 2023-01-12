@@ -5,9 +5,19 @@ export default function InputForm() {
         firstName: "",
         lastName: "",
         isChecked: false,
+        gender: "", 
+        comments: "",
+        favColor: "",
     })
     
-    console.log(input)
+    
+
+    function handleSubmit(e) {
+        // Prevent refresh page
+        e.preventDefault();
+        // submitToApi(input)
+        console.log(input)
+    }
 
     function handleChange(event) {
         const value = event.target.type === "checkbox" ? event.target.checked : event.target.value
@@ -22,7 +32,7 @@ export default function InputForm() {
     }
 
     return (
-        <div>
+        <form onSubmit={handleSubmit}>
             <input
                 type = "text" 
                 placeholder="First name"
@@ -73,11 +83,30 @@ export default function InputForm() {
                 value = {input.radioBox}
                 onChange = {handleChange}
             >
-                <input type="radio" value="Male" name="gender" /> Male
-                <input type="radio" value="Female" name="gender" /> Female
-                <input type="radio" value="Other" name="gender" /> Other
-            </div>   
-           
-        </div>
+                <input 
+                    type="radio" 
+                    value="Male" 
+                    name="gender"
+                    checkek={input.gender ==="Male"} 
+                /> Male
+                <input type="radio" value="Female" name="gender" checkek={input.gender ==="Female"} /> Female
+                <input type="radio" value="Other" name="gender" checkek={input.gender ==="Other"}  /> Other
+            </div>
+            <br/>
+            <select
+                id="favColor"
+                value={input.favColor}
+                name = 'favColor'
+                onChange={handleChange}
+            >
+                <option value="">---Choose option---</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+            </select>   
+            <br/>
+            <button>Submit</button>
+        </form>
     ) 
 }

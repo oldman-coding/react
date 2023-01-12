@@ -1,0 +1,9 @@
+.signup {
+    width: 300px;
+    height: 400px;
+    border-radius: 2px;
+}
+
+.signup > input {
+    margin: 5px;
+}

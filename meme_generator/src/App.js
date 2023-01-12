@@ -16,6 +16,7 @@ import Messages from './components/Messages';
 import Joke from './components/Joke';
 import jokedata from './data/jokedata'; 
 import InputForm from './components/InputForm';
+import SignUp from './components/SignUp';
 
 library.add(faStar,)
 
@@ -78,6 +79,7 @@ function App() {
       <Messages />
       {jokeElements}
       <InputForm />
+      <SignUp />
     </div>
   );
 }
