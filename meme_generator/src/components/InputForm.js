@@ -26,24 +26,49 @@ export default function InputForm() {
             <input
                 type = "text" 
                 placeholder="First name"
-                // value = {firstName}
+                value = {input.firstName}
                 onChange = {handleChange}
                 name = "firstName"
+                id ="firstName"
             />
+            <label htmlFor="firstName">
+                First Name
+            </label>
 
             <input 
                 type = "text"
                 placeholder="Last name"
-                // value = {lastName}
+                value = {input.lastName}
                 onChange = {handleChange}
                 name = "lastName"
             />
             <input 
+                type = "email"
+                placeholder="email"
+                value = {input.email}
+                onChange = {handleChange}
+                name = "email"
+            />
+            <input 
                 type = "checkbox"
-                // value = {isChecked}
+                value = {input.isChecked}
                 onChange = {handleChange}
                 name = "isChecked"
+                id="isChecked"
             />
+            <label
+                htmlFor="isChecked"
+            >
+                Are you sure you want to
+            </label>
+            <br/>
+            <textarea
+                type = "checkbox"
+                value = {input.comments}
+                onChange = {handleChange}
+                name = "comments"
+            />
+           
         </div>
     ) 
 }
